@@ -24,12 +24,6 @@ package com.mlytvyn.codility.lesson01;
  */
 public class PermMissingElem {
 
-    public static void main(String... args) {
-        PermMissingElem pme = new PermMissingElem();
-        int[] A = {2, 3, 1, 5};
-        System.out.println(pme.solution(A));
-    }
-
     public int solution(int[] A) {
         long expectedSum = 0l;
         long originalSum = 0l;

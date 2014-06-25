@@ -25,14 +25,6 @@ package com.mlytvyn.codility.lesson01;
  */
 public class FrogJmp {
 
-    public static void main(String... args) {
-        FrogJmp fj = new FrogJmp();
-        int X = 10;
-        int Y = 85;
-        int D = 30;
-        System.out.println(fj.solution(X, Y, D));
-    }
-
     public int solution(int X, int Y, int D) {
         // write your code in Java SE 8
         int jumps = (Y - X) / D;

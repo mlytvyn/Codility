@@ -37,12 +37,6 @@ package com.mlytvyn.codility.lesson01;
  */
 public class TapeEquilibrium {
 
-    public static void main(String... args) {
-        TapeEquilibrium a = new TapeEquilibrium();
-        int[] A = {3, 1, 2, 4, 3};
-        System.out.println(String.format("0 < %s < %s", a.solution(A), A.length));
-    }
-
     public int solution(int[] A) {
         int sum = 0;
         for (int a : A) {
