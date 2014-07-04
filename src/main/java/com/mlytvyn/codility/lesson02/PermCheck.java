@@ -15,27 +15,17 @@ public class PermCheck {
 
     public int solution(int[] A) {
         // write your code in Java SE 8
-        int min = A[0];
-        int max = A[0];
-        long sum = A[0];
-        for (int i = 1; i < A.length; i++) {
-            sum += A[i];
-            if (min == A[i] || max == A[i]) {
+        int[] B = new int[A.length];
+        int count = 0;
+        int val;
+        for (int i = 0; i < A.length; i++, count++) {
+            val = A[i] - 1;
+            if (val >= A.length || B[val] != 0) {
                 return 0;
             }
-            if (min > A[i]) {
-                min = A[i];
-            }
-            if (max < A[i]) {
-                max = A[i];
-            }
+            B[val] = A[i];
         }
-        if (min > 1) {
-            return 0;
-        }
-        long toMinSum = ((1 + min) * min) / 2;
-        long toMaxSum = ((1 + max) * max) / 2;
 
-        return  (sum + toMinSum - toMaxSum - min) == 0 ? 1 : 0;
+        return count == A.length ? 1 : 0;
     }
 }

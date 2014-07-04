@@ -3,16 +3,16 @@ package com.mlytvyn.codility.lesson02;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 /**
  * Created by michael on 6/25/14.
  */
 public class PermCheckTest {
 
-    private PermCheck testClass;
     private static final int success = 1;
     private static final int fail = 0;
+    private PermCheck testClass;
 
     @BeforeMethod
     public void setUp() throws Exception {
@@ -53,6 +53,12 @@ public class PermCheckTest {
     public void solutionAntiSum1() {
         int[] A = {1, 2, 3};
         assertEquals(testClass.solution(A), success);
+    }
+
+    @Test(groups = "correctness")
+    public void solutionAntiSum2_1() {
+        int[] A = {1, 6, 3, 3, 4, 4};
+        assertEquals(testClass.solution(A), fail);
     }
 
     @Test(groups = "performance", description = "permutation, N = ~10,000")
