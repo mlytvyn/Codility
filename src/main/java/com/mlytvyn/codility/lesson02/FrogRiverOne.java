@@ -22,7 +22,7 @@ public class FrogRiverOne {
         // write your code in Java SE 8
         int[] path = new int[A.length];
         long sum = 0l;
-        long expectedSum = ((1 + X) * X) / 2;
+        long expectedSum = ((1l + X) * X) / 2;
         for (int i = 0; i < A.length; i++) {
             if (A[i] > A.length) {
                 return -1;
