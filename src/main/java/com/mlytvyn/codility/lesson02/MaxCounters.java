@@ -34,6 +34,7 @@ public class MaxCounters {
     public int[] solution(int N, int[] A) {
         // write your code in Java SE 8
         int[] counters = new int[N];
+        int[] empty = new int[N];
         int maxCounter = 0;
         int maxTotalCounter = 0;
         for (int k : A) {
@@ -45,7 +46,7 @@ public class MaxCounters {
                 }
             }
             if (k == N + 1) {
-                counters = new int[N];
+                System.arraycopy(empty, 0, counters, 0, counters.length);
                 maxTotalCounter += maxCounter;
                 maxCounter = 0;
             }
