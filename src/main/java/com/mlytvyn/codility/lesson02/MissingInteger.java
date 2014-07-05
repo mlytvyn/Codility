@@ -1,7 +1,9 @@
 package com.mlytvyn.codility.lesson02;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Created by mlytvyn on 7/5/14.
@@ -26,9 +28,10 @@ import java.util.Set;
 public class MissingInteger {
 
     public int solution(int[] A) {
+        System.out.println(Arrays.toString(A));
         // write your code in Java SE 8
         int min = 1;
-        Set<Integer> mins = new HashSet<Integer>();
+        Set<Integer> mins = new TreeSet<Integer>();
         Set<Integer> all = new HashSet<Integer>();
 
         mins.add(min);

@@ -49,8 +49,8 @@ public class MissingIntegerTest {
 
     @Test
     public void testExtremeMaxMinInt() throws Exception {
-        int[] A = {Integer.MIN_VALUE, Integer.MAX_VALUE};
-        Assert.assertEquals(testClass.solution(A), 1);
+        int[] A = {1, 2, 3, 1, 1, 2, 4, 5, -2147483648, 2147483647};
+        Assert.assertEquals(testClass.solution(A), 6);
     }
 
     @Test
