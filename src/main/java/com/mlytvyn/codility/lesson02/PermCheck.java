@@ -3,13 +3,7 @@ package com.mlytvyn.codility.lesson02;
 /**
  * Created by michael on 6/25/14.
  *
- * A non-empty zero-indexed array A consisting of N integers is given.
- A permutation is a sequence containing each element from 1 to N once, and only once.
- For example, array A such that:
- A = {4, 1, 3, 2}
- is a permutation, but array A such that:
- A = {4, 1, 3}
- is not a permutation.
+ * https://codility.com/demo/take-sample-test/perm_check
  */
 public class PermCheck {
 
