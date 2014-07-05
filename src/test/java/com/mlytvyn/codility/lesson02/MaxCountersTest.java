@@ -28,4 +28,13 @@ public class MaxCountersTest {
         System.out.println(Arrays.toString(expected));
         Assert.assertEquals(actual, expected);
     }
+
+    @Test
+    public void testTwoMaxCounters() throws Exception {
+        int N = 5;
+        int[] A = {4, 4, 4, 6, 2, 6, 4, 4, 1, 1, 1};
+        int[] expected = {7, 4, 4, 6, 4};
+        int[] actual = testClass.solution(N, A);
+        Assert.assertEquals(actual, expected);
+    }
 }
