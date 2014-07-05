@@ -1,6 +1,5 @@
 package com.mlytvyn.codility.lesson02;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
@@ -28,7 +27,6 @@ import java.util.TreeSet;
 public class MissingInteger {
 
     public int solution(int[] A) {
-        System.out.println(Arrays.toString(A));
         // write your code in Java SE 8
         int min = 1;
         Set<Integer> mins = new TreeSet<Integer>();
@@ -37,11 +35,10 @@ public class MissingInteger {
         mins.add(min);
         for (int a : A) {
             all.add(a);
-            if (a > min) {
-                min = a - 1;
+            if (a > mins.iterator().next()) {
+                min = a + 1;
                 mins.add(min);
-            }
-            if (a == min) {
+            } else if (a == min) {
                 min++;
                 mins.add(min);
             }
