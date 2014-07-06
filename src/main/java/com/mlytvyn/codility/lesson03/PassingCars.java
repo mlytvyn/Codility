@@ -21,6 +21,6 @@ public class PassingCars {
                 numberOfPassingCars += r;
             }
         }
-        return numberOfPassingCars > MAX_PASSING_CARS ? -1 : numberOfPassingCars;
+        return numberOfPassingCars > MAX_PASSING_CARS || numberOfPassingCars < 0 ? -1 : numberOfPassingCars;
     }
 }
