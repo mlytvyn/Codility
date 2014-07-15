@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 
 /**
  * Created by mlytvyn on 7/10/14.
@@ -31,7 +32,6 @@ public class GenomicRangeQueryTest {
 
         int[] expected = {2, 4, 1};
         int[] actual = testClass.solution(S, P, Q);
-        System.out.println(Arrays.toString(actual));
         Assert.assertEquals(actual, expected);
     }
 }
